@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+
+
+
+.outer{
+  background-color: rgb(24, 23, 23);
+  width: 100vw;
+  height: 100vh;
+  padding: 10px 10px;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box{
+  background: rgb(36, 38, 38);
+    background: linear-gradient(45deg, rgba(36, 38, 38, 1) 0%, rgba(48, 51, 51, 1) 85%, rgba(32, 34, 34, 1) 100%);
+  width: 28rem;
+  height: 28rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 1.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+}
+
+.star{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(56, 55, 55);
+  position: relative;
+  padding: 16px;
+  margin-bottom: 30px;
+}
+
+.starIcon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text>h1{
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+} 
+
+.text>p{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: rgb(133, 133, 133);
+}
+
+.rate{
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.rate>div{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(56, 55, 55);
+  border-radius: 50%;
+  position: relative;
+}
+
+.ratings{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(133, 133, 133);
+}
+
+button{
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-color: orange;
+  padding: 20px 30px;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  border-radius: 2rem;
 }
