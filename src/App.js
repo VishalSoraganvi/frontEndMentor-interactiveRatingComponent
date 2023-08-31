@@ -1,40 +1,27 @@
-import { StarIcon } from "lucide-react";
+import { useState } from "react";
+import Welcome from "./components/welcome";
+import ThanksPage from "./components/thanksPage";
 import "./App.css";
 
 function App() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [rating, setRating] = useState(null);
+
+  const onSubmitHandler = () => {
+    setIsSubmitted(true);
+  };
+
+  const handleRating = (value) => {
+    setRating(value);
+  };
+
   return (
-    <div>
-      <div className="outer">
-        <div className="box">
-          <div className="star">
-            <StarIcon fill="orange" size={20} className="starIcon" />
-          </div>
-          <div className="text">
-            <h1>How did we do?</h1>
-            <p>
-              Please let us know how we did with your support request. All
-              feedback is appreciated to help us improve our offering!
-            </p>
-          </div>
-          <div className="rate">
-            <div className="rate1">
-              <div className="ratings">1</div>
-            </div>
-            <div className="rate2">
-              <div className="ratings">2</div>
-            </div>
-            <div className="rate3">
-              <div className="ratings">3</div>
-            </div>
-            <div className="rate4">
-              <div className="ratings">4</div>
-            </div>
-            <div className="rate5">
-              <div className="ratings">5</div>
-            </div>
-          </div>
-          <button>SUBMIT</button>
-        </div>
+    <div className="outer">
+      <div className="box">
+        {!isSubmitted && (
+          <Welcome onSubmit={onSubmitHandler} onRate={handleRating} />
+        )}
+        {isSubmitted && <ThanksPage rating={rating} />}
       </div>
     </div>
   );
